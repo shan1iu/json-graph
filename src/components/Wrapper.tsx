@@ -7,12 +7,12 @@ import 'split-pane-react/esm/themes/default.css';
 import JSONEditor from './JSONEditor';
 
 export default function Wrapper() {
-  const [sizes, setSizes] = useState<(number | string)[]>([480, 'auto']);
+  const [sizes, setSizes] = useState<(number | string)[]>([500, 'auto']);
 
   return (
     <div style={{ height: 'calc(100vh - 53px)' }}>
       <SplitPane sizes={sizes} onChange={setSizes} sashRender={() => null}>
-        <Pane minSize={240} maxSize='50%'>
+        <Pane minSize={500} maxSize='50%'>
           <JSONEditor />
         </Pane>
         <JSONGraphTree />
